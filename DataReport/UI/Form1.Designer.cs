@@ -28,48 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataTable = new System.Windows.Forms.DataGridView();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtBoxPath = new System.Windows.Forms.TextBox();
+            this.regionComboBox = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 102);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(433, 319);
-            this.dataGridView1.TabIndex = 0;
+            this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTable.Location = new System.Drawing.Point(23, 79);
+            this.dataTable.Name = "dataTable";
+            this.dataTable.RowHeadersWidth = 51;
+            this.dataTable.RowTemplate.Height = 24;
+            this.dataTable.Size = new System.Drawing.Size(760, 399);
+            this.dataTable.TabIndex = 0;
             // 
-            // button1
+            // btnLoad
             // 
-            this.button1.Location = new System.Drawing.Point(47, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cargar archivo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLoad.Location = new System.Drawing.Point(319, 27);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(112, 36);
+            this.btnLoad.TabIndex = 1;
+            this.btnLoad.Text = "Cargar archivo";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtBoxPath
+            // 
+            this.txtBoxPath.Location = new System.Drawing.Point(35, 34);
+            this.txtBoxPath.Name = "txtBoxPath";
+            this.txtBoxPath.Size = new System.Drawing.Size(266, 22);
+            this.txtBoxPath.TabIndex = 2;
+            // 
+            // regionComboBox
+            // 
+            this.regionComboBox.FormattingEnabled = true;
+            this.regionComboBox.Items.AddRange(new object[] {
+            "Región Centro Oriente"});
+            this.regionComboBox.Location = new System.Drawing.Point(461, 34);
+            this.regionComboBox.Name = "regionComboBox";
+            this.regionComboBox.Size = new System.Drawing.Size(204, 24);
+            this.regionComboBox.TabIndex = 3;
+            this.regionComboBox.SelectedIndexChanged += new System.EventHandler(this.regionComboBox_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1014, 548);
+            this.Controls.Add(this.regionComboBox);
+            this.Controls.Add(this.txtBoxPath);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.dataTable);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataTable;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtBoxPath;
+        private System.Windows.Forms.ComboBox regionComboBox;
     }
 }
 
