@@ -1,0 +1,10 @@
+C:\Users\mateo\source\repos\DataReport\DataReport\bin\Debug\DataReport.exe.config
+C:\Users\mateo\source\repos\DataReport\DataReport\bin\Debug\DataReport.exe
+C:\Users\mateo\source\repos\DataReport\DataReport\bin\Debug\DataReport.pdb
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.csprojAssemblyReference.cache
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.Properties.Resources.resources
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.csproj.GenerateResource.cache
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.csproj.CoreCompileInputs.cache
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.exe
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.pdb
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.UI.Form1.resources
