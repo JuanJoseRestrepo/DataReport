@@ -9,12 +9,34 @@ namespace DataReport.Model
     class Departamentos
     {
 
-        private String nombre;
+        private string nombre;
         private int numeroDeMunicipios;
 
-        public Departamentos()
+        public Departamentos(string Nombre,int NumeroDeMunicipios)
         {
+            this.nombre = Nombre;
+            this.numeroDeMunicipios = NumeroDeMunicipios;
+        }
 
+
+        public void setNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+        public string getNombre()
+        {
+            return nombre;
+        }
+
+        public void setNumeroDeMunicipios(int NumeroDeMunicipios)
+        {
+            this.numeroDeMunicipios = NumeroDeMunicipios;
+        }
+
+        public int getNumeroDeMunicipios()
+        {
+            return numeroDeMunicipios;
         }
 
     }

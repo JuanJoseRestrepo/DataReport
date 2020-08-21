@@ -82,9 +82,9 @@
             // 
             // Municipios
             // 
-            this.Municipios.Location = new System.Drawing.Point(880, 442);
+            this.Municipios.Location = new System.Drawing.Point(681, 35);
             this.Municipios.Name = "Municipios";
-            this.Municipios.Size = new System.Drawing.Size(75, 23);
+            this.Municipios.Size = new System.Drawing.Size(125, 23);
             this.Municipios.TabIndex = 4;
             this.Municipios.Text = "Municipios";
             this.Municipios.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 548);
+            this.ClientSize = new System.Drawing.Size(829, 548);
             this.Controls.Add(this.Municipios);
             this.Controls.Add(this.regionComboBox);
             this.Controls.Add(this.txtBoxPath);

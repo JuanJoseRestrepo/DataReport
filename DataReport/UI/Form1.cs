@@ -44,7 +44,8 @@ namespace DataReport.UI
 
         private void Municipios_Click(object sender, EventArgs e)
         {
-            Form2 form1 = new Form2();
+            txtBoxPath.Text = openFileDialog1.FileName;
+            Form2 form1 = new Form2(txtBoxPath.Text);
             form1.ShowDialog();
         }
     }
