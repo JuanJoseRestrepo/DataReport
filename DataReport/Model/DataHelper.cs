@@ -18,7 +18,7 @@ namespace DataReport.Model
 
         public void refresh()
         {
-            table.Clear();
+            table?.Clear();
         }
 
         public void organizateInformation(string filePath,string region)
