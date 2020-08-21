@@ -1,9 +1,11 @@
 ﻿
+using NPoco.Expressions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +39,13 @@ namespace DataReport.UI
         private void regionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void Municipios_Click(object sender, EventArgs e)
+        {
+            Form2 form1 = new Form2();
+            form1.ShowDialog();
         }
     }
 }

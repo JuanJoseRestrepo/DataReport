@@ -16,6 +16,8 @@ namespace DataReport.Model
             get => table;
         }
 
+
+
         public void CreateTable(string filePath)
         {
 
@@ -81,10 +83,11 @@ namespace DataReport.Model
                 {
                     string[] dataLine = lines[i].Split(',');
 
-                    if (dataLine[4])
-                    {
+                  //  if (dataLine[4])
+                    
+                    //{
 
-                    }
+                    //}
 
                     DataRow row = table.NewRow();
 

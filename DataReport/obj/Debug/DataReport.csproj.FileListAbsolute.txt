@@ -8,3 +8,16 @@ C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.csproj.Co
 C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.exe
 C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.pdb
 C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.UI.Form1.resources
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.csprojAssemblyReference.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.UI.Form1.resources
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.Properties.Resources.resources
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.UI.Form2.resources
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.csproj.GenerateResource.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.csproj.CoreCompileInputs.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.exe
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.pdb
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\bin\Debug\DataReport.exe.config
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\bin\Debug\DataReport.exe
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\bin\Debug\DataReport.pdb
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\bin\Debug\NPoco.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.csproj.CopyComplete
