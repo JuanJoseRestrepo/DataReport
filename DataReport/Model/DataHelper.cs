@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace DataReport.Model
 {
@@ -31,8 +32,10 @@ namespace DataReport.Model
 
                 for (int i = 1; i < lines.Length; i++)
                 {
-                    string[] dataLine = lines[i].Split(',');
-                    
+
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+
                     if (dataLine.Length > 0)
                     {
                         if (dataLine[0].Equals(region))
@@ -73,7 +76,8 @@ namespace DataReport.Model
             {
                 string firstLine = lines[0];
 
-                string[] labels = firstLine.Split(',');
+                //This will ignore commas between double quotes in the CSV file
+                string[] labels = Regex.Split(firstLine, ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                 foreach (string header in labels)
                 {
@@ -82,7 +86,9 @@ namespace DataReport.Model
 
                 for (int i = 1; i < lines.Length; i++)
                 {
-                    string[] dataLine = lines[i].Split(',');
+                    
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                     DataRow row = table.NewRow();
                     
@@ -126,7 +132,8 @@ namespace DataReport.Model
 
                 for (int i = 1; i < lines.Length; i++)
                 {
-                    string[] dataLine = lines[i].Split(',');
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                     DataRow row = table.NewRow();
 

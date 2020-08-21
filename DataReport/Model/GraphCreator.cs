@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DataReport.Model
@@ -32,7 +33,8 @@ namespace DataReport.Model
 
                 for (int i = 1; i < lines.Length; i++)
                 {
-                    string[] dataLine = lines[i].Split(',');
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                     for (int j = 0; j < dataLine.Length; j++)
                     {
