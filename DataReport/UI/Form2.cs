@@ -22,8 +22,15 @@ namespace DataReport.UI
 
         public void Form2_load()
         {
-
-            Municipios.Series["Municipio seleccionado"].Points.AddXY("Peter", 1000);
+        
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
+            Municipios.Series["Municipio seleccionado"].Points.AddXY("Amazonas", 1000);
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -32,6 +39,11 @@ namespace DataReport.UI
         }
 
         private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
