@@ -97,9 +97,14 @@ namespace DataReport.UI
 
         private void Municipios_Click(object sender, EventArgs e)
         {
-            txtBoxPath.Text = openFileDialog1.FileName;
-            Form2 form2 = new Form2(txtBoxPath.Text.ToString());
-            form2.ShowDialog();
+
+            if (txtBoxPath.Text != "" && txtBoxPath.Text != null)
+            {
+                txtBoxPath.Text = openFileDialog1.FileName;
+                Form2 form2 = new Form2(txtBoxPath.Text.ToString());
+                form2.ShowDialog();
+            }
+
         }
 
         private void dataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)

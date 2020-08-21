@@ -41,19 +41,21 @@
             // dataTable
             // 
             this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTable.Location = new System.Drawing.Point(23, 79);
+            this.dataTable.Location = new System.Drawing.Point(17, 64);
+            this.dataTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataTable.Name = "dataTable";
             this.dataTable.RowHeadersWidth = 51;
             this.dataTable.RowTemplate.Height = 24;
-            this.dataTable.Size = new System.Drawing.Size(760, 399);
+            this.dataTable.Size = new System.Drawing.Size(570, 324);
             this.dataTable.TabIndex = 0;
             this.dataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellContentClick);
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(319, 27);
+            this.btnLoad.Location = new System.Drawing.Point(239, 22);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(112, 36);
+            this.btnLoad.Size = new System.Drawing.Size(84, 29);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Cargar archivo";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@
             // 
             // txtBoxPath
             // 
-            this.txtBoxPath.Location = new System.Drawing.Point(35, 34);
+            this.txtBoxPath.Location = new System.Drawing.Point(26, 28);
+            this.txtBoxPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxPath.Name = "txtBoxPath";
-            this.txtBoxPath.Size = new System.Drawing.Size(266, 22);
+            this.txtBoxPath.Size = new System.Drawing.Size(200, 20);
             this.txtBoxPath.TabIndex = 2;
             // 
             // regionComboBox
@@ -80,32 +83,35 @@
             "Región Llano",
             "Región Centro Sur",
             "Región Pacífico"});
-            this.regionComboBox.Location = new System.Drawing.Point(461, 34);
+            this.regionComboBox.Location = new System.Drawing.Point(346, 28);
+            this.regionComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.regionComboBox.Name = "regionComboBox";
-            this.regionComboBox.Size = new System.Drawing.Size(204, 24);
+            this.regionComboBox.Size = new System.Drawing.Size(154, 21);
             this.regionComboBox.TabIndex = 3;
             this.regionComboBox.SelectedIndexChanged += new System.EventHandler(this.regionComboBox_SelectedIndexChanged);
             // 
             // Municipios
             // 
-            this.Municipios.Location = new System.Drawing.Point(681, 35);
+            this.Municipios.Location = new System.Drawing.Point(391, 392);
+            this.Municipios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Municipios.Name = "Municipios";
-            this.Municipios.Size = new System.Drawing.Size(125, 23);
+            this.Municipios.Size = new System.Drawing.Size(186, 38);
             this.Municipios.TabIndex = 4;
-            this.Municipios.Text = "Municipios";
+            this.Municipios.Text = "Generar grafico";
             this.Municipios.UseVisualStyleBackColor = true;
             this.Municipios.Click += new System.EventHandler(this.Municipios_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 548);
+            this.ClientSize = new System.Drawing.Size(622, 445);
             this.Controls.Add(this.Municipios);
             this.Controls.Add(this.regionComboBox);
             this.Controls.Add(this.txtBoxPath);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dataTable);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();

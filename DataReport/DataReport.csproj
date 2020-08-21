@@ -58,7 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\DataHelper.cs" />
-    <Compile Include="Model\Departamentos.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\GraphCreator.cs" />
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
