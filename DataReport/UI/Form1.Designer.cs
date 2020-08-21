@@ -52,7 +52,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(239, 22);
+            this.btnLoad.Location = new System.Drawing.Point(26, 20);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(84, 29);
@@ -67,7 +67,7 @@
             // 
             // txtBoxPath
             // 
-            this.txtBoxPath.Location = new System.Drawing.Point(26, 28);
+            this.txtBoxPath.Location = new System.Drawing.Point(127, 25);
             this.txtBoxPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxPath.Name = "txtBoxPath";
             this.txtBoxPath.Size = new System.Drawing.Size(200, 20);
