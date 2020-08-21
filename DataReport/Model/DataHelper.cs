@@ -16,7 +16,51 @@ namespace DataReport.Model
             get => table;
         }
 
+        public void setDataTable(DataTable e)
+        {
+            this.table = e;
+        }
 
+        public void refresh()
+        {
+            table.Clear();
+        }
+
+        public void organizateInformation(string filePath,string region)
+        {
+
+            string[] lines = System.IO.File.ReadAllLines(filePath);
+ 
+            if (lines.Length > 0)
+            {
+
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    string[] dataLine = lines[i].Split(',');
+                    
+                    if (dataLine[0].Equals(region))
+                    {
+                        DataRow row = table.NewRow();
+                        for (int j = 0; j < dataLine.Length; j++)
+                        {
+                            try
+                            {
+                                row[j] = dataLine[j];
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("An error occurred while reading the data");
+                            }
+                        }
+
+                        table.Rows.Add(row);
+                    }
+                }
+
+            }
+
+
+        }
 
         public void CreateTable(string filePath)
         {
@@ -41,11 +85,12 @@ namespace DataReport.Model
                     string[] dataLine = lines[i].Split(',');
 
                     DataRow row = table.NewRow();
-
+                    
                     for (int j = 0; j < dataLine.Length; j++)
                     {
                         try
                         {
+
                             row[j] = dataLine[j];
                         }
                         catch (Exception e)

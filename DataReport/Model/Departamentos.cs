@@ -8,7 +8,6 @@ namespace DataReport.Model
 {
     class Departamentos
     {
-
         private string nombre;
         private int numeroDeMunicipios;
 
@@ -17,6 +16,7 @@ namespace DataReport.Model
             this.nombre = Nombre;
             this.numeroDeMunicipios = NumeroDeMunicipios;
         }
+
 
 
         public void setNombre(string nombre)

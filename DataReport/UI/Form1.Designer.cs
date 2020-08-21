@@ -47,6 +47,7 @@
             this.dataTable.RowTemplate.Height = 24;
             this.dataTable.Size = new System.Drawing.Size(760, 399);
             this.dataTable.TabIndex = 0;
+            this.dataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellContentClick);
             // 
             // btnLoad
             // 
@@ -73,7 +74,12 @@
             // 
             this.regionComboBox.FormattingEnabled = true;
             this.regionComboBox.Items.AddRange(new object[] {
-            "Región Centro Oriente"});
+            "Región Centro Oriente",
+            "Región Eje Cafetero - Antioquia",
+            "Región Caribe",
+            "Región Llano",
+            "Región Centro Sur",
+            "Región Pacífico"});
             this.regionComboBox.Location = new System.Drawing.Point(461, 34);
             this.regionComboBox.Name = "regionComboBox";
             this.regionComboBox.Size = new System.Drawing.Size(204, 24);
