@@ -70,7 +70,7 @@
             this.txtBoxPath.Location = new System.Drawing.Point(127, 25);
             this.txtBoxPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxPath.Name = "txtBoxPath";
-            this.txtBoxPath.Size = new System.Drawing.Size(200, 20);
+            this.txtBoxPath.Size = new System.Drawing.Size(201, 20);
             this.txtBoxPath.TabIndex = 2;
             // 
             // regionComboBox
@@ -83,16 +83,16 @@
             "Región Llano",
             "Región Centro Sur",
             "Región Pacífico"});
-            this.regionComboBox.Location = new System.Drawing.Point(346, 28);
+            this.regionComboBox.Location = new System.Drawing.Point(346, 24);
             this.regionComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.regionComboBox.Name = "regionComboBox";
-            this.regionComboBox.Size = new System.Drawing.Size(154, 21);
+            this.regionComboBox.Size = new System.Drawing.Size(164, 21);
             this.regionComboBox.TabIndex = 3;
             this.regionComboBox.SelectedIndexChanged += new System.EventHandler(this.regionComboBox_SelectedIndexChanged);
             // 
             // Municipios
             // 
-            this.Municipios.Location = new System.Drawing.Point(391, 392);
+            this.Municipios.Location = new System.Drawing.Point(401, 396);
             this.Municipios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Municipios.Name = "Municipios";
             this.Municipios.Size = new System.Drawing.Size(186, 38);
