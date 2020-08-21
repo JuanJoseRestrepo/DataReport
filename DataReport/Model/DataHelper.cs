@@ -16,6 +16,52 @@ namespace DataReport.Model
             get => table;
         }
 
+        public void refresh()
+        {
+            table.Clear();
+        }
+
+        public void organizateInformation(string filePath,string region)
+        {
+
+            string[] lines = System.IO.File.ReadAllLines(filePath);
+ 
+            if (lines.Length > 1)
+            {
+
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    string[] dataLine = lines[i].Split(',');
+                    
+                    if (dataLine.Length > 0)
+                    {
+                        if (dataLine[0].Equals(region))
+                        {
+                            DataRow row = table.NewRow();
+                            for (int j = 0; j < dataLine.Length; j++)
+                            {
+                                try
+                                {
+                                    row[j] = dataLine[j];
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine("WARNING: The CSV is poorly formatted!");
+                                }
+                            }
+
+                            table.Rows.Add(row);
+                        }
+                    }
+
+
+                }
+
+            }
+
+
+        }
+
         public void CreateTable(string filePath)
         {
 
@@ -39,16 +85,17 @@ namespace DataReport.Model
                     string[] dataLine = lines[i].Split(',');
 
                     DataRow row = table.NewRow();
-
+                    
                     for (int j = 0; j < dataLine.Length; j++)
                     {
                         try
                         {
+
                             row[j] = dataLine[j];
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("An error occurred while reading the data");
+                            Console.WriteLine("WARNING: The CSV is poorly formatted!");
                         }
                     }
 
@@ -81,11 +128,6 @@ namespace DataReport.Model
                 {
                     string[] dataLine = lines[i].Split(',');
 
-                    if (dataLine[4])
-                    {
-
-                    }
-
                     DataRow row = table.NewRow();
 
                     for (int j = 0; j < dataLine.Length; j++)
@@ -96,7 +138,7 @@ namespace DataReport.Model
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("An error occurred while reading the data");
+                            Console.WriteLine("WARNING: The CSV is poorly formatted!");
                         }
                     }
 

@@ -33,6 +33,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtBoxPath = new System.Windows.Forms.TextBox();
             this.regionComboBox = new System.Windows.Forms.ComboBox();
+            this.Municipios = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +47,7 @@
             this.dataTable.RowTemplate.Height = 24;
             this.dataTable.Size = new System.Drawing.Size(760, 399);
             this.dataTable.TabIndex = 0;
+            this.dataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellContentClick);
             // 
             // btnLoad
             // 
@@ -71,18 +74,34 @@
             // 
             this.regionComboBox.FormattingEnabled = true;
             this.regionComboBox.Items.AddRange(new object[] {
-            "Región Centro Oriente"});
+            "Región Centro Oriente",
+            "Región Eje Cafetero - Antioquia",
+            "Región Caribe",
+            "Región Llano",
+            "Región Centro Sur",
+            "Región Pacífico"});
             this.regionComboBox.Location = new System.Drawing.Point(461, 34);
             this.regionComboBox.Name = "regionComboBox";
             this.regionComboBox.Size = new System.Drawing.Size(204, 24);
             this.regionComboBox.TabIndex = 3;
             this.regionComboBox.SelectedIndexChanged += new System.EventHandler(this.regionComboBox_SelectedIndexChanged);
             // 
+            // Municipios
+            // 
+            this.Municipios.Location = new System.Drawing.Point(681, 35);
+            this.Municipios.Name = "Municipios";
+            this.Municipios.Size = new System.Drawing.Size(125, 23);
+            this.Municipios.TabIndex = 4;
+            this.Municipios.Text = "Municipios";
+            this.Municipios.UseVisualStyleBackColor = true;
+            this.Municipios.Click += new System.EventHandler(this.Municipios_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 548);
+            this.ClientSize = new System.Drawing.Size(829, 548);
+            this.Controls.Add(this.Municipios);
             this.Controls.Add(this.regionComboBox);
             this.Controls.Add(this.txtBoxPath);
             this.Controls.Add(this.btnLoad);
@@ -102,6 +121,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtBoxPath;
         private System.Windows.Forms.ComboBox regionComboBox;
+        private System.Windows.Forms.Button Municipios;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
