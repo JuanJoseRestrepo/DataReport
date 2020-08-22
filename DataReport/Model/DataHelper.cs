@@ -4,21 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace DataReport.Model
 {
     class DataHelper
-    {
-        private DataTable table;
+    {  
+      private DataTable table;
 
         public DataTable Table
         {
             get => table;
-        }
-
-        public void setDataTable(DataTable e)
-        {
-            this.table = e;
         }
 
         public void refresh()
@@ -31,30 +27,37 @@ namespace DataReport.Model
 
             string[] lines = System.IO.File.ReadAllLines(filePath);
  
-            if (lines.Length > 0)
+            if (lines.Length > 1)
             {
 
                 for (int i = 1; i < lines.Length; i++)
                 {
-                    string[] dataLine = lines[i].Split(',');
-                    
-                    if (dataLine[0].Equals(region))
-                    {
-                        DataRow row = table.NewRow();
-                        for (int j = 0; j < dataLine.Length; j++)
-                        {
-                            try
-                            {
-                                row[j] = dataLine[j];
-                            }
-                            catch (Exception e)
-                            {
-                                Console.WriteLine("An error occurred while reading the data");
-                            }
-                        }
 
-                        table.Rows.Add(row);
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+
+                    if (dataLine.Length > 0)
+                    {
+                        if (dataLine[0].Equals(region))
+                        {
+                            DataRow row = table.NewRow();
+                            for (int j = 0; j < dataLine.Length; j++)
+                            {
+                                try
+                                {
+                                    row[j] = dataLine[j];
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine("WARNING: The CSV is poorly formatted!");
+                                }
+                            }
+
+                            table.Rows.Add(row);
+                        }
                     }
+
+
                 }
 
             }
@@ -73,7 +76,8 @@ namespace DataReport.Model
             {
                 string firstLine = lines[0];
 
-                string[] labels = firstLine.Split(',');
+                //This will ignore commas between double quotes in the CSV file
+                string[] labels = Regex.Split(firstLine, ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                 foreach (string header in labels)
                 {
@@ -82,7 +86,9 @@ namespace DataReport.Model
 
                 for (int i = 1; i < lines.Length; i++)
                 {
-                    string[] dataLine = lines[i].Split(',');
+                    
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                     DataRow row = table.NewRow();
                     
@@ -95,7 +101,7 @@ namespace DataReport.Model
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("An error occurred while reading the data");
+                            Console.WriteLine("WARNING: The CSV is poorly formatted!");
                         }
                     }
 
@@ -126,13 +132,8 @@ namespace DataReport.Model
 
                 for (int i = 1; i < lines.Length; i++)
                 {
-                    string[] dataLine = lines[i].Split(',');
-
-                  //  if (dataLine[4])
-                    
-                    //{
-
-                    //}
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                     DataRow row = table.NewRow();
 
@@ -144,7 +145,7 @@ namespace DataReport.Model
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("An error occurred while reading the data");
+                            Console.WriteLine("WARNING: The CSV is poorly formatted!");
                         }
                     }
 

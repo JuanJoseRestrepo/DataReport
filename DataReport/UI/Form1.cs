@@ -33,63 +33,81 @@ namespace DataReport.UI
 
                 dataHelper.CreateTable(txtBoxPath.Text);
 
-                if (dataHelper.Table != null)
-                    dataTable.DataSource = dataHelper.Table;
+            if (dataHelper.Table != null)
+                dataTable.DataSource = dataHelper.Table;
 
         }
 
         private void regionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(regionComboBox.SelectedItem.ToString());
+            //Console.WriteLine(regionComboBox.SelectedItem.ToString());
             dataHelper.refresh();
-            if (regionComboBox.SelectedItem.ToString().Equals("Región Centro Oriente")) {
-                Console.WriteLine(txtBoxPath.Text.ToString());
-                string region = "Región Centro Oriente";
-                string path = regionComboBox.SelectedItem.ToString();
-                dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
-            }
-            else if (regionComboBox.SelectedItem.ToString().Equals("Región Eje Cafetero - Antioquia"))
-            {
-                string region = "Región Eje Cafetero - Antioquia";
-                string path = regionComboBox.SelectedItem.ToString();
-                dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
 
-            }
-            else if (regionComboBox.SelectedItem.ToString().Equals("Región Caribe"))
+            if (txtBoxPath.Text != "" && txtBoxPath.Text != null)
             {
-                string region = "Región Caribe";
-                string path = regionComboBox.SelectedItem.ToString();
-                dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+
+                if (regionComboBox.SelectedItem.ToString().Equals("Región Centro Oriente"))
+                {
+                    //Console.WriteLine(txtBoxPath.Text.ToString());
+                    string region = "Región Centro Oriente";
+                    string path = regionComboBox.SelectedItem.ToString();
+
+                    dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+                }
+                else if (regionComboBox.SelectedItem.ToString().Equals("Región Eje Cafetero - Antioquia"))
+                {
+                    string region = "Región Eje Cafetero - Antioquia";
+                    string path = regionComboBox.SelectedItem.ToString();
+
+                    dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+
+                }
+                else if (regionComboBox.SelectedItem.ToString().Equals("Región Caribe"))
+                {
+                    string region = "Región Caribe";
+                    string path = regionComboBox.SelectedItem.ToString();
+
+                    dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
 
 
-            }
-            else if (regionComboBox.SelectedItem.ToString().Equals("Región Llano"))
-            {
-                string region = "Región Llano";
-                string path = regionComboBox.SelectedItem.ToString();
-                dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+                }
+                else if (regionComboBox.SelectedItem.ToString().Equals("Región Llano"))
+                {
+                    string region = "Región Llano";
+                    string path = regionComboBox.SelectedItem.ToString();
 
-            }
-            else if (regionComboBox.SelectedItem.ToString().Equals("Región Centro Sur"))
-            {
-                string region = "Región Centro Sur";
-                string path = regionComboBox.SelectedItem.ToString();
-                dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
-            }
-            else if (regionComboBox.SelectedItem.ToString().Equals("Región Pacífico"))
-            {
-                string region = "Región Pacífico";
-                string path = regionComboBox.SelectedItem.ToString();
-                dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+                    dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+
+                }
+                else if (regionComboBox.SelectedItem.ToString().Equals("Región Centro Sur"))
+                {
+                    string region = "Región Centro Sur";
+                    string path = regionComboBox.SelectedItem.ToString();
+
+                    dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+                }
+                else if (regionComboBox.SelectedItem.ToString().Equals("Región Pacífico"))
+                {
+                    string region = "Región Pacífico";
+                    string path = regionComboBox.SelectedItem.ToString();
+
+                    dataHelper.organizateInformation(txtBoxPath.Text.ToString(), region);
+                }
+
             }
 
         }
 
         private void Municipios_Click(object sender, EventArgs e)
         {
-            txtBoxPath.Text = openFileDialog1.FileName;
-            Form2 form1 = new Form2(txtBoxPath.Text.ToString());
-            form1.ShowDialog();
+
+            if (txtBoxPath.Text != "" && txtBoxPath.Text != null)
+            {
+                txtBoxPath.Text = openFileDialog1.FileName;
+                Form2 form2 = new Form2(txtBoxPath.Text.ToString());
+                form2.ShowDialog();
+            }
+
         }
 
         private void dataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)

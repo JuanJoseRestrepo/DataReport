@@ -21,3 +21,6 @@ C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport
 C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\bin\Debug\DataReport.pdb
 C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\bin\Debug\NPoco.dll
 C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\DataReport\DataReport\obj\Debug\DataReport.csproj.CopyComplete
+C:\Users\mateo\source\repos\DataReport\DataReport\bin\Debug\NPoco.dll
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.UI.Form2.resources
+C:\Users\mateo\source\repos\DataReport\DataReport\obj\Debug\DataReport.csproj.CopyComplete

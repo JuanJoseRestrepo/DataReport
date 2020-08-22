@@ -50,27 +50,30 @@
             this.Municipios3.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.Municipios3.Legends.Add(legend1);
-            this.Municipios3.Location = new System.Drawing.Point(3, 3);
+            this.Municipios3.Location = new System.Drawing.Point(2, 2);
+            this.Municipios3.Margin = new System.Windows.Forms.Padding(2);
             this.Municipios3.Name = "Municipios3";
             this.Municipios3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series1.Legend = "Legend1";
-            series1.Name = "Municipio seleccionado 3";
+            series1.Name = "Cantidad de municipios";
             this.Municipios3.Series.Add(series1);
-            this.Municipios3.Size = new System.Drawing.Size(1082, 744);
+            this.Municipios3.Size = new System.Drawing.Size(812, 604);
             this.Municipios3.TabIndex = 3;
             this.Municipios3.Text = "chart1";
             title1.Name = "Title1";
-            title1.Text = "Municipio";
+            title1.Text = "Grafico";
             this.Municipios3.Titles.Add(title1);
+            this.Municipios3.Click += new System.EventHandler(this.Municipios3_Click);
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1136, 0);
+            this.panel2.Location = new System.Drawing.Point(852, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 651);
+            this.panel2.Size = new System.Drawing.Size(8, 529);
             this.panel2.TabIndex = 5;
             // 
             // flowLayoutPanel1
@@ -79,17 +82,19 @@
             this.flowLayoutPanel1.Controls.Add(this.Municipios3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1136, 651);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(852, 529);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 651);
+            this.ClientSize = new System.Drawing.Size(860, 529);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Municipios3)).EndInit();
